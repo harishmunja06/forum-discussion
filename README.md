@@ -1,60 +1,152 @@
-🧵 Forum and Discussion Board Platform
-A full-stack discussion board platform where users can create threads, post comments, and engage with a community. Built using the MERN stack with JWT-based authentication and RESTful APIs.
+# Forum Discussion 🗣️
 
-🚀 Features
-✅ User Registration & Login (JWT)
-🧵 Create, Edit, Delete Threads
-💬 Post, Edit, Delete Comments
-🔒 Secure Route Protection with Middleware
-🧠 MongoDB Schema Design
-📱 Responsive UI using React & Tailwind CSS
-☁️ Deployed on Vercel (Frontend) & Render (Backend)
-🛠️ Tech Stack
-Frontend	Backend	Database	Deployment
-React.js	Node.js, Express	MongoDB Atlas	Vercel, Render
-📁 Project Structure
-/client       # React app
-/server       # Express backend
-🧪 API Endpoints
-👤 Auth
-POST /api/auth/register
-POST /api/auth/login
-GET /api/auth/me
-🧵 Threads
-GET /api/threads
-POST /api/threads
-GET /api/threads/:id
-PUT /api/threads/:id
-DELETE /api/threads/:id
-💬 Comments
-POST /api/threads/:id/comments
-PUT /api/comments/:id
-DELETE /api/comments/:id
-🚦 Getting Started
-1. Clone Repo
-git clone https://github.com/harishmunja06/forum-discussion.git
-cd forum
-2. Setup Client
-cd client
-npm install
-npm start
-3. Setup Server
+A full-stack **MERN-based discussion forum** where users can register, log in, create threads, comment, and interact based on roles and permissions.
+
+---
+
+## 🚀 Features
+
+- User Authentication (Signup & Login)
+- JWT-based Authorization
+- Role-based Access Control (Admin / Moderator / Community Member)
+- Create and manage discussion threads
+- Comment on threads
+- Protected routes
+- Password hashing using bcrypt
+- MongoDB database integration
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js
+- CSS
+- Context API / Hooks
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+- JWT Authentication
+- bcryptjs
+
+---
+
+## 📁 Project Structure
+
+Forum101/
+├── React/
+│ └── client/
+│ ├── src/
+│ ├── public/
+│ └── package.json
+│
+├── server/
+│ ├── controllers/
+│ ├── routes/
+│ ├── middleware/
+│ ├── models/
+│ ├── database/
+│ ├── .env
+│ └── index.js
+│
+├── .gitignore
+├── README.md
+└── package.json
+
+yaml
+Copy code
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/harishmunja06/forum-dicussion.git
+cd forum-dicussion
+2️⃣ Backend Setup
+bash
+Copy code
 cd server
 npm install
-touch .env   # Add MONGO_URI and JWT_SECRET
+Create a .env file inside server/:
+
+env
+Copy code
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+PORT=4000
+EMAIL_SERVICE=gmail
+EMAIL_USERNAME=your_email
+EMAIL_PASSWORD=your_email_password
+Start backend:
+
+bash
+Copy code
+npm start
+Backend runs on:
+
+arduino
+Copy code
+http://localhost:4000
+3️⃣ Frontend Setup
+bash
+Copy code
+cd React/client
+npm install
+npm start
+Frontend runs on:
+
+arduino
+Copy code
+http://localhost:3000
+4️⃣ Run Both Frontend & Backend (Optional)
+From project root:
+
+bash
+Copy code
 npm run dev
-📸 Screenshots
-Landing Page
+🔐 API Endpoints (Sample)
+Method	Endpoint	Description
+POST	/signup	Register user
+POST	/login	Login user
+GET	/todos	Fetch todos
+POST	/threads	Create thread
+POST	/threads/:id/comments	Add comment
 
-📌 Future Work
-🔔 Notifications
-🔎 Search & Filters
-📅 Google Calendar Integration
-🏷️ Tag-based Sorting
-📱 Mobile PWA support
-📜 License
-This project is licensed under the MIT License.
-© 2025 Jathin Nyatha
+🧪 Authentication Flow
+User signs up
 
-🙋‍♂️ Author
+Password is hashed using bcrypt
+
+JWT token generated on login
+
+Token used to access protected routes
+
+Role-based permissions enforced
+
+🚫 Security Notes
+.env file is not committed
+
+Passwords are hashed
+
+JWT tokens expire automatically
+
+Role-based authorization enforced via middleware
+
+📌 Future Improvements
+Pagination for threads
+
+Search & filter discussions
+
+User profile editing
+
+File uploads
+
+Deployment (Render / Netlify)
+
+👨‍💻 Author
 Harish Munja
+GitHub: https://github.com/harishmunja06
