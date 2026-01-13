@@ -1,0 +1,197 @@
+/* Saved.css */
+
+.saved-wrapper {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  margin-left: 300px;
+  margin-right: 40px;
+  min-height: calc(100vh - 120px);
+  /* background-color: #f8f9fa; */
+  font-family: "Segoe UI", Arial, sans-serif;
+  padding: 20px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.saved-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  background: linear-gradient(135deg, #228be6 0%, #74c0fc 100%);
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.saved-box {
+  /* background-color: white; */
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  width: 85%;
+  max-width: 800px;
+  color: #2c2e3e;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.saved-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #228be6, #74c0fc);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.saved-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.saved-box:hover::before {
+  opacity: 1;
+}
+
+.saved-box h2 {
+  font-size: 22px;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: color 0.2s ease;
+}
+
+.saved-box:hover h2 {
+  color: #228be6;
+}
+
+.author-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  color: #495057;
+  margin-right: 12px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar:hover {
+  transform: scale(1.1) rotate(5deg);
+  color: #228be6;
+}
+
+.author {
+  font-weight: 600;
+  margin-right: 10px;
+  color: #495057;
+}
+
+.time {
+  color: #6c757d;
+  margin-right: auto;
+}
+
+.saved-tag {
+  background: linear-gradient(135deg, #e7f5ff 0%, #d0ebff 100%);
+  color: #1971c2;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid #d0ebff;
+}
+
+.saved-tag:hover {
+  background: linear-gradient(135deg, #d0ebff 0%, #e7f5ff 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(34, 139, 230, 0.1);
+}
+
+.saved-box p {
+  font-size: 15px;
+  color: #495057;
+  line-height: 1.7;
+  margin-top: 15px;
+  padding: 0 5px;
+}
+
+/* Add animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.saved-box {
+  animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+.saved-box:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.saved-box:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .saved-wrapper {
+    margin-left: 250px;
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .saved-wrapper {
+    margin-left: 200px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .saved-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 15px;
+  }
+
+  .saved-box {
+    padding: 20px;
+    width: 95%;
+  }
+
+  .saved-box h2 {
+    font-size: 20px;
+  }
+}

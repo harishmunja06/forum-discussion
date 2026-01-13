@@ -1,0 +1,187 @@
+/* src/styles/Header.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+.custom-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px clamp(12px, 3vw, 24px); /* Responsive padding */
+  background: linear-gradient(90deg, rgb(29, 30, 43), rgb(29, 30, 43));
+  color: white;
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  box-sizing: border-box;
+  gap: 12px;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 1; /* Allow shrinking */
+  min-width: 0; /* Important for flex items to shrink */
+}
+
+.globe-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.brand-text h1 {
+  font-size: clamp(14px, 2.5vw, 16px); /* Responsive font size */
+  margin: 0;
+  font-weight: 500;
+}
+
+.brand-text p {
+  font-size: clamp(10px, 1.8vw, 12px); /* Responsive font size */
+  margin: 0;
+  color: #c9c9c9;
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  padding: 4px 8px;
+  flex-grow: 1;
+  max-width: 400px;
+  box-sizing: border-box;
+  min-width: 120px;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.search-section:focus-within {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.search-section form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.search-section input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: white;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.search-section input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+.search-section input:focus::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.search-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  margin-right: 4px;
+}
+
+.search-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+.search-icon {
+  font-size: 16px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.search-button:hover .search-icon {
+  transform: scale(1.1);
+}
+
+.nav-section {
+  display: flex;
+  gap: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 8px 10px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+.nav-section a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.nav-section a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .custom-header {
+    padding: 12px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .left-section,
+  .search-section,
+  .nav-section {
+    width: 100%; /* Ensure all sections take full width on mobile */
+    max-width: none; /* Override any max-width constraints */
+  }
+
+  .search-section {
+    max-width: none;
+    margin: 8px 0;
+  }
+
+  .search-section input {
+    font-size: 16px; /* Larger font for mobile */
+  }
+
+  .search-button {
+    padding: 10px 14px; /* Larger touch target */
+  }
+
+  .nav-section {
+    justify-content: center;
+    width: 100%;
+    padding: 8px 8px;
+  }
+}

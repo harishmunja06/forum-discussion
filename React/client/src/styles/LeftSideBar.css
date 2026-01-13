@@ -1,0 +1,242 @@
+.left-sidebar {
+  position: fixed;
+  top: 120px;
+  left: 0;
+  width: 260px;
+  height: calc(100% - 120px);
+  background: #232532;
+  color: #fff;
+  padding: 32px 0 0 0;
+  z-index: 800;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Hide sidebar on mobile by default */
+.left-sidebar.closed {
+  transform: translateX(-100%);
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0 0 0 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar-menu li {
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.sidebar-menu li:last-child {
+  margin-bottom: 0;
+}
+
+/* Section Title */
+.sidebar-section-title {
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  margin: 32px 0 18px 32px;
+  letter-spacing: 0.5px;
+  user-select: none;
+}
+
+/* Buttons styling */
+.sidebar-menu li button {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 10px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  text-align: left;
+}
+
+/* Colorful hover backgrounds and icon/text colors */
+.sidebar-menu li:nth-child(1) button:hover,
+.sidebar-menu li:nth-child(1) button:focus {
+  background: linear-gradient(90deg, #ff5f6d, #ffc371);
+  color: #800000;
+}
+.sidebar-menu li:nth-child(2) button:hover,
+.sidebar-menu li:nth-child(2) button:focus {
+  background: linear-gradient(90deg, #f7971e, #ffd200);
+  color: #6b4f00;
+}
+.sidebar-menu li:nth-child(3) button:hover,
+.sidebar-menu li:nth-child(3) button:focus {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #e0e7ff;
+}
+.sidebar-menu li:nth-child(4) button:hover,
+.sidebar-menu li:nth-child(4) button:focus {
+  background: linear-gradient(90deg, #11998e, #38ef7d);
+  color: #023020;
+}
+.sidebar-menu li:nth-child(5) button:hover,
+.sidebar-menu li:nth-child(5) button:focus {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  color: #520000;
+}
+
+/* Topics list hover colors */
+.sidebar-menu li:nth-child(7) button:hover,
+.sidebar-menu li:nth-child(7) button:focus {
+  background: linear-gradient(90deg, #2193b0, #6dd5ed);
+  color: #042f44;
+}
+.sidebar-menu li:nth-child(8) button:hover,
+.sidebar-menu li:nth-child(8) button:focus {
+  background: linear-gradient(90deg, #f46b45, #eea849);
+  color: #5a2b00;
+}
+.sidebar-menu li:nth-child(9) button:hover,
+.sidebar-menu li:nth-child(9) button:focus {
+  background: linear-gradient(90deg, #4776e6, #8e54e9);
+  color: #241161;
+}
+.sidebar-menu li:nth-child(10) button:hover,
+.sidebar-menu li:nth-child(10) button:focus {
+  background: linear-gradient(90deg, #56ab2f, #a8e063);
+  color: #21400f;
+}
+.sidebar-menu li:nth-child(11) button:hover,
+.sidebar-menu li:nth-child(11) button:focus {
+  background: linear-gradient(90deg, #ffb347, #ffcc33);
+  color: #604200;
+}
+
+/* Buttons general hover and focus */
+.sidebar-menu li button:hover,
+.sidebar-menu li button:focus {
+  background: #313347;
+  color: #fff;
+}
+
+/* Icon styling */
+.icon {
+  font-size: 26px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+/* Icons change color on hover matching the text */
+.sidebar-menu li:nth-child(1) button:hover .icon,
+.sidebar-menu li:nth-child(1) button:focus .icon {
+  color: #800000;
+}
+.sidebar-menu li:nth-child(2) button:hover .icon,
+.sidebar-menu li:nth-child(2) button:focus .icon {
+  color: #6b4f00;
+}
+.sidebar-menu li:nth-child(3) button:hover .icon,
+.sidebar-menu li:nth-child(3) button:focus .icon {
+  color: #e0e7ff;
+}
+.sidebar-menu li:nth-child(4) button:hover .icon,
+.sidebar-menu li:nth-child(4) button:focus .icon {
+  color: #023020;
+}
+.sidebar-menu li:nth-child(5) button:hover .icon,
+.sidebar-menu li:nth-child(5) button:focus .icon {
+  color: #520000;
+}
+
+.sidebar-menu li:nth-child(7) button:hover .icon,
+.sidebar-menu li:nth-child(7) button:focus .icon {
+  color: #042f44;
+}
+.sidebar-menu li:nth-child(8) button:hover .icon,
+.sidebar-menu li:nth-child(8) button:focus .icon {
+  color: #5a2b00;
+}
+.sidebar-menu li:nth-child(9) button:hover .icon,
+.sidebar-menu li:nth-child(9) button:focus .icon {
+  color: #241161;
+}
+.sidebar-menu li:nth-child(10) button:hover .icon,
+.sidebar-menu li:nth-child(10) button:focus .icon {
+  color: #21400f;
+}
+.sidebar-menu li:nth-child(11) button:hover .icon,
+.sidebar-menu li:nth-child(11) button:focus .icon {
+  color: #604200;
+}
+
+.profile-icon {
+  font-size: 28px;
+}
+
+/* Scrollbar */
+.left-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.left-sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 64, 129, 0.4);
+  border-radius: 3px;
+}
+.left-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Sidebar toggle button */
+.sidebar-toggle-btn {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  background: #232532;
+  border: none;
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  font-size: 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  transition: background 0.2s;
+}
+.sidebar-toggle-btn:hover {
+  background: #313347;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .left-sidebar {
+    transform: translateX(-100%);
+  }
+  .left-sidebar.open {
+    transform: translateX(0);
+  }
+  .sidebar-toggle-btn {
+    display: flex;
+  }
+}
+
+.threads-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+  /* Remove extra baseline space for SVGs */
+  position: relative;
+  top: 1px;
+}

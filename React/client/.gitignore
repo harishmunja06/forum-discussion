@@ -1,0 +1,16 @@
+# dependencies
+node_modules/
+
+# env
+.env
+server/.env
+
+# builds
+React/client/build/
+
+# archives
+*.zip
+
+# OS
+.DS_Store
+Thumbs.db
