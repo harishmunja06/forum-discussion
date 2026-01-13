@@ -55,10 +55,6 @@ Forum101/
 ├── README.md
 └── package.json
 
-yaml
-Copy code
-
----
 
 ## ⚙️ Installation & Setup
 
@@ -68,13 +64,11 @@ git clone https://github.com/harishmunja06/forum-dicussion.git
 cd forum-dicussion
 2️⃣ Backend Setup
 bash
-Copy code
 cd server
 npm install
 Create a .env file inside server/:
 
 env
-Copy code
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 PORT=4000
@@ -84,30 +78,25 @@ EMAIL_PASSWORD=your_email_password
 Start backend:
 
 bash
-Copy code
 npm start
 Backend runs on:
 
 arduino
-Copy code
+
 http://localhost:4000
 3️⃣ Frontend Setup
 bash
-Copy code
+
 cd React/client
 npm install
 npm start
 Frontend runs on:
 
-arduino
-Copy code
 http://localhost:3000
 4️⃣ Run Both Frontend & Backend (Optional)
 From project root:
-
-bash
-Copy code
 npm run dev
+
 🔐 API Endpoints (Sample)
 Method	Endpoint	Description
 POST	/signup	Register user
